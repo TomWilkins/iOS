@@ -16,6 +16,7 @@
 		F20A803D1A4E207F0008C7D1 /* QuoteQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A803C1A4E207F0008C7D1 /* QuoteQuizTests.m */; };
 		F20A80481A4E23CD0008C7D1 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A80471A4E23CD0008C7D1 /* Quiz.m */; };
 		F20A804A1A4E28B70008C7D1 /* quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = F20A80491A4E28B70008C7D1 /* quotes.plist */; };
+		F242727B1A4EDB8500C03B3B /* QuizTipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F242727A1A4EDB8500C03B3B /* QuizTipViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		F20A80461A4E23CD0008C7D1 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
 		F20A80471A4E23CD0008C7D1 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
 		F20A80491A4E28B70008C7D1 /* quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quotes.plist; sourceTree = "<group>"; };
+		F24272791A4EDB8500C03B3B /* QuizTipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizTipViewController.h; sourceTree = "<group>"; };
+		F242727A1A4EDB8500C03B3B /* QuizTipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizTipViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				F20A80461A4E23CD0008C7D1 /* Quiz.h */,
 				F20A80471A4E23CD0008C7D1 /* Quiz.m */,
 				F20A80491A4E28B70008C7D1 /* quotes.plist */,
+				F24272791A4EDB8500C03B3B /* QuizTipViewController.h */,
+				F242727A1A4EDB8500C03B3B /* QuizTipViewController.m */,
 			);
 			path = QuoteQuiz;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20A80291A4E207F0008C7D1 /* ViewController.m in Sources */,
+				F242727B1A4EDB8500C03B3B /* QuizTipViewController.m in Sources */,
 				F20A80261A4E207F0008C7D1 /* AppDelegate.m in Sources */,
 				F20A80481A4E23CD0008C7D1 /* Quiz.m in Sources */,
 				F20A80231A4E207F0008C7D1 /* main.m in Sources */,
@@ -422,6 +428,7 @@
 				F20A80421A4E207F0008C7D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F20A80431A4E207F0008C7D1 /* Build configuration list for PBXNativeTarget "QuoteQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				F20A80451A4E207F0008C7D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -29,6 +29,7 @@
         self.movieArray = [NSMutableArray arrayWithContentsOfFile:plistCatPath];
         
         self.numberOfQuestions = [self.movieArray count];
+        self.numberOfTipsUsed = 0;
     }
     return self;
 }
@@ -36,16 +37,18 @@
 // This method assumes the pList contains an array dictionary with a defined quote and ans1-3
 - (void) nextQuestion: (NSUInteger) idx{
     
-    // get the quote and answers from the p list array
+    // get the quote, answers and tip from the p list array
     self.quote = [NSString stringWithFormat:@"'%@'", self.movieArray[idx][@"quote"]];
     self.ans1 = self.movieArray[idx][@"ans1"];
     self.ans2 = self.movieArray[idx][@"ans2"];
     self.ans3 = self.movieArray[idx][@"ans3"];
+    self.tip = self.movieArray[idx][@"tip"];
     
     // if the next question is 0, restart the quiz variables
     if(idx == 0){
         self.correctCount = 0;
         self.incorrectCount = 0;
+        self.numberOfTipsUsed = 0;
     }
 }
 

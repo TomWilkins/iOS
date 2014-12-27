@@ -100,6 +100,13 @@
     self.answer2Button.hidden = NO;
     self.answer3Button.hidden = NO;
     self.startButton.hidden = YES;
+    
+    // shows the info button (to show the tips) if the number of tips used is less than 3
+    if(self.quiz.numberOfTipsUsed < 3){
+        self.infoButton.hidden = NO;
+    }else{
+        self.infoButton.hidden = YES;
+    }
 }
 
 - (void) checkAnswer{
@@ -161,6 +168,33 @@
 // goes to the next question
 - (IBAction)startAgain:(id)sender{
     [self nextQuizItem];
+}
+
+// The delegate method, dissmiss the view controller
+- (void)quizTipDidFinish:(QuizTipViewController *)controller{
+    [self dismissViewControllerAnimated:YES completion:^{}];
+}
+
+// this will run when a segue is used to change view controllers
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    // run this if its the tip modal segue
+    if([segue.identifier isEqualToString:@"TipModal"]){
+     
+        // get the tip view controller
+        QuizTipViewController *detailViewController =(QuizTipViewController *) segue.destinationViewController;
+        
+        // set this view controller as the delegate and set the quiz text
+        detailViewController.delegate = self;
+        detailViewController.tipText = self.quiz.tip;
+        detailViewController.numberOfTipsUsed = self.quiz.numberOfTipsUsed;
+        
+        self.quiz.numberOfTipsUsed ++;
+        if(self.quiz.numberOfTipsUsed >= 3){
+            self.infoButton.hidden = YES;
+        }
+        
+    }
 }
 
 @end

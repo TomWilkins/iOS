@@ -22,6 +22,10 @@
 @property (nonatomic, readonly, strong) NSString *ans2;
 @property (nonatomic, readonly, strong) NSString *ans3;
 
+// tips
+@property (nonatomic, assign) NSInteger numberOfTipsUsed;
+@property (nonatomic, strong) NSString *tip;
+
 - (id)initWithQuiz: (NSString*)plistName;
 
 // NSUInteger : unsigned integer object

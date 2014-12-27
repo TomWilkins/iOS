@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuizTipViewController.h"
+
 @class Quiz;
 
-@interface ViewController : UIViewController
+// mark this view controller as the delegate of QuizTipViewController
+@interface ViewController : UIViewController <QuizTipViewControllerDelegate>
 
 // an index to keep track of the question number
 // ASSIGN: generate a setter that assigns the value directly to the instance rather than copying/ retainig it
